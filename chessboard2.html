@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 400px;
+        height: 400px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+  <script>
+    var chessboard = document.getElementById("container");
+    for (var i = 1; i < 64; i++) {
+      var box1 = document.createElement("div");
+      if (i % 2 == 0) {
+        box1.style.backgroundColor = "black";
+        box1.style.width = "50px";
+        box1.style.height = "50px";
+        box1.style.float = "left";
+        box1.style.border = "1px solid black";
+      } else {
+        box1.style.backgroundColor = "white";
+        box1.style.width = "50px";
+        box1.style.height = "50px";
+        box1.style.float = "left";
+        box1.style.border = "1px solid black";
+      }
+      chessboard.appendChild(box1);
+    }
+  </script>
+</html>
